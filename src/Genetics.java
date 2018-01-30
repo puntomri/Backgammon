@@ -101,7 +101,7 @@ public class Genetics {
     public void reGenerateVer2(ArrayList<ComputerPlayer> pop){
 
         //create roulette array
-        ArrayList<ComputerPlayer> roulette = new ArrayList();
+        ArrayList<ComputerPlayer> roulette = new ArrayList<>();
         for (int i = 0; i< pop.size();i++){
             int relativescore =  pop.get(i).score - pop.get(0).score;
             System.out.println("no  " + i + "  rscore=  " + relativescore + "  score=  "+ pop.get(i).score);

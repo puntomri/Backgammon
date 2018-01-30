@@ -34,7 +34,7 @@ public class GameCell extends JPanel{
                     if (!B.pieceinAir) B.takeAPiece(index);
                     else B.placeAPiece(index);
                 } else {
-                    JOptionPane.showMessageDialog(null,"תור חדש, גלגל את הקוביות","",1);
+                    JOptionPane.showMessageDialog(null,"New turn, Roll dices","",1);
                 }
             }
 

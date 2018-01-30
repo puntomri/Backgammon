@@ -76,7 +76,7 @@ public class BgGui extends JPanel{
         buttons.setSize(200,100);
         buttons.setBackground(new Color(96, 64, 32));
 
-        new2game = new JButton("משחק חדש - שני שחקנים");
+        new2game = new JButton("New Two-Player game");
         new2game.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -84,7 +84,7 @@ public class BgGui extends JPanel{
             }
         });
 
-        newcompgame = new JButton("משחק חדש - שחקן מול מחשב");
+        newcompgame = new JButton("New One-Player game");
         newcompgame.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -92,14 +92,16 @@ public class BgGui extends JPanel{
             }
         });
 
-        newcompcomp = new JButton("משחק חדש - מחשב מול המחשב");
+        newcompcomp = new JButton("New Simulation");
+        newcompcomp.setEnabled(false);
         newcompcomp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 B.setPieces(true,true);
             }
         });
-        simulator = new JButton("סימולטור 100 משחקים");
+        simulator = new JButton("New 100 game Sim");
+        simulator.setEnabled(false);
         simulator.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -107,6 +109,7 @@ public class BgGui extends JPanel{
             }
         });
         gen = new JButton("gen");
+        gen.setEnabled(false);
         gen.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -116,7 +119,7 @@ public class BgGui extends JPanel{
         });
 
 
-        JRadioButton easy = new JRadioButton("קל");
+        JRadioButton easy = new JRadioButton("easy");
         //easy.setActionCommand("1");
         easy.setSelected(true);
         easy.addActionListener(new ActionListener() {
@@ -126,7 +129,7 @@ public class BgGui extends JPanel{
             }
         });
 
-        JRadioButton medium = new JRadioButton("בינוני");
+        JRadioButton medium = new JRadioButton("medium");
        // medium.setActionCommand("2");
         medium.addActionListener(new ActionListener() {
             @Override
@@ -135,7 +138,7 @@ public class BgGui extends JPanel{
             }
         });
 
-        JRadioButton hard = new JRadioButton("קשה");
+        JRadioButton hard = new JRadioButton("hard");
         //hard.setActionCommand("3");
         hard.addActionListener(new ActionListener() {
             @Override
@@ -144,7 +147,7 @@ public class BgGui extends JPanel{
             }
         });
 
-        JRadioButton harder = new JRadioButton("יותר קשה");
+        JRadioButton harder = new JRadioButton("harder");
         //hard.setActionCommand("3");
         harder.addActionListener(new ActionListener() {
             @Override
@@ -153,7 +156,7 @@ public class BgGui extends JPanel{
             }
         });
 
-        JRadioButton exharder = new JRadioButton("הכי קשה");
+        JRadioButton exharder = new JRadioButton("superhard");
         //hard.setActionCommand("3");
         exharder.addActionListener(new ActionListener() {
             @Override
@@ -229,16 +232,16 @@ public class BgGui extends JPanel{
 
     public void gameOverM(boolean turn){
         String message;
-        if (turn) message = "הלבן";
-        else message = "השחור";
-            JOptionPane.showMessageDialog(null,"!!! המשחק נגמר "+"המנצח הוא:  "+message,"",1);
+        if (turn) message = "white";
+        else message = "black";
+            JOptionPane.showMessageDialog(null,"Winner is: "+message + "!!  Game over","",1);
 
     }
     public void stuck(boolean turn){
         String message;
-        if (turn) message = "הלבן";
-        else message = "השחור";
-        JOptionPane.showMessageDialog(null,message+ " תקוע. התור עובר לשחקן השני "  ,"",1);
+        if (turn) message = "White";
+        else message = "Black";
+        JOptionPane.showMessageDialog(null,message+ " can't move. turn changed. "  ,"",1);
 
     }
 

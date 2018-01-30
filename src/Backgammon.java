@@ -6,7 +6,7 @@ public class Backgammon {
 
     private static BgGui bggui;
 
-    Stack<Piece> [] board;
+    Stack<Piece>[] board;
     boolean turn;
     boolean pieceinAir;
     private int inAirOrig;
@@ -43,10 +43,10 @@ public class Backgammon {
         computerPlayWhite= new ComputerPlayer(this,3,1,2,5,3,1,3);
         //computerPlayBlack = new ComputerPlayer(this,3,1,2,Scores,3,1,3);
 
-        board = new Stack[26];
+        board =  new Stack [26];
        // whiteboard = new Stack[26];
        // blackboard = new Stack[26];
-        validMoves = new <Integer>Stack();
+        validMoves = new Stack<Integer>();
        // pieceCanOut = false;
         dice1 = new Dice(this);
         dice2 = new Dice(this);
@@ -585,7 +585,7 @@ public class Backgammon {
 
 
         while(!gameover()&&currentTurn==turn) {
-            ArrayList<AMove> movelist = new ArrayList();
+            ArrayList<AMove> movelist = new ArrayList<>();
 
 
             //create a move list with points
